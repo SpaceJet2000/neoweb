@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "NeoWeb Browser",
+  "version": "1.0",
+  "permissions": ["webRequest", "webRequestBlocking", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["content.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
